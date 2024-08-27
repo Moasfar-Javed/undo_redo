@@ -31,7 +31,8 @@ class Menu extends StatelessWidget {
         children: [
           _buildMenuButton(context, 'view int example', const IntExample()),
           _buildMenuButton(context, 'view list example', const ListExample()),
-          _buildMenuButton(context, 'view object example', const ObjectExample()),
+          _buildMenuButton(
+              context, 'view object example', const ObjectExample()),
         ],
       ),
     );
