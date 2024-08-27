@@ -1,0 +1,33 @@
+name: undo_redo
+description: "Simple and easy package to add an undo/redo feature"
+version: 0.0.1
+homepage: https://github.com/Moasfar-Javed/undo_redo
+repository: https://github.com/Moasfar-Javed/undo_redo
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+
+flutter:
+
+platforms:
+  android:
+  ios:
+  web:
+  windows:
+  linux:
+  macos:
+
+topics:
+  - undo
+  - redo
