@@ -1,6 +1,6 @@
 name: undo_redo
-description: "Simple and easy package to add an undo/redo feature"
-version: 0.0.1
+description: "A simple, lightweight package for adding undo/redo functionality to your Flutter apps, suitable for both primitives and complex objects"
+version: 0.0.2
 homepage: https://github.com/Moasfar-Javed/undo_redo
 repository: https://github.com/Moasfar-Javed/undo_redo
 

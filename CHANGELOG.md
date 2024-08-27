@@ -1,3 +1,7 @@
+## 0.0.2
+
+Updated descriptions to match pub.dev's guidelines
+
 ## 0.0.1
 
 Initial Version of the package.
