@@ -29,9 +29,9 @@ class Menu extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildMenuButton(context, 'view int example', IntExample()),
-          _buildMenuButton(context, 'view list example', ListExample()),
-          _buildMenuButton(context, 'view object example', ObjectExample()),
+          _buildMenuButton(context, 'view int example', const IntExample()),
+          _buildMenuButton(context, 'view list example', const ListExample()),
+          _buildMenuButton(context, 'view object example', const ObjectExample()),
         ],
       ),
     );

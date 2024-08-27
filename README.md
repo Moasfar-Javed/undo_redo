@@ -2,7 +2,7 @@
 
 This is a simple and powerful Dart package that provides easy-to-use undo and redo functionality with additional convenience methods. Whether you're working with simple primitives or complex objects, this package helps you implement undo/redo effortlessly.
 
-## Platform Support
+## Platforms
 
 | Android | iOS | MacOS | Web | Linux | Windows |
 | :-----: | :-: | :---: | :-: | :---: | :-----: |
@@ -10,7 +10,13 @@ This is a simple and powerful Dart package that provides easy-to-use undo and re
 
 ## Demo
 
-Explore the live web demo to see the package in action
+Explore the [live web demo](https://undo-redo.dijinx.com) to see the package in action
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://media.giphy.com/media/iW9U8xDb8SMFEreLxv/giphy.gif" alt="Basic example using integers" style="width: 32%;"/>
+    <img src="https://media.giphy.com/media/DVkeKmZS8riMYb8EPb/giphy.gif" alt="Deep copy example using list" style="width: 32%;"/>
+    <img src="https://media.giphy.com/media/tnXGfJze1OpGJxiBjk/giphy.gif" alt="Deep copy example using custom object" style="width: 32%;"/>
+</div>
 
 ## Getting Started
 
@@ -30,8 +36,8 @@ import 'package:undo_redo/undo_redo.dart';
 
 ## Usage
 
-#### Example 1 - Primitives
-Using the package's UndoRedoManager on primitives.
+#### Example 1: Undo/Redo with Primitives
+Managing state changes with primitive types is straightforward:
 
 ```dart
 final UndoRedoManager<int> _undoRedoManager = UndoRedoManager<int>();
@@ -64,13 +70,11 @@ bool canUndo = _undoRedoManager.canUndo();
 bool canRedo = _undoRedoManager.canRedo();
 ```
 
-#### Example 2 - Non-primitives
-Using the package's UndoRedoManager on primitives.
+#### Example 2: Undo/Redo with Non-Primitives
 
-Note
-> For all non-primitive types you MUST create a deep copy of the data. Since the non-primitive types such as collections, lists and objects are passed by reference they will be overwritten if used as-is
+> When working with non-primitive types such as objects or collections, you must use a deep copy to ensure that state changes are independent
 
-For Lists
+##### For Lists
 
 ```dart
 //This refers to the same memory location(s)
@@ -78,8 +82,8 @@ List<int> ages = originalAges;
 //This a deep copy and not the same reference in memory
 List<int> ages = List.from(originalAges); 
 ```
-
-For Objects extend the Cloneable interface to provide a simple `clone()` method
+##### For Custom Objects
+Implement the `Cloneable` interface to provide a deep copy method:
 
 ```dart
 class Staff extends Cloneable<Staff> {
@@ -123,4 +127,4 @@ void undo() {
 ```
 ## Contributions
 
-Contributions are welcome! Please feel free to submit a pull request or report issues on the package's GitHub
+Contributions are welcome! Please feel free to submit a pull request or report issues on the [package's GitHub](https://github.com/Moasfar-Javed/undo_redo)
