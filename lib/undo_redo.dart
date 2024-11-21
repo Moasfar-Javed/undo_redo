@@ -5,4 +5,5 @@
 library undo_redo;
 
 export 'src/cloneable.dart';
+export 'src/cloneable_mixin.dart';
 export 'src/undo_redo_manager.dart';
