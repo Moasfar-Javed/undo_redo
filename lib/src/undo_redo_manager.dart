@@ -25,7 +25,20 @@ class UndoRedoManager<T> {
   ///
   /// Requires:
   /// - [state]: The initial action to initialize the undo/redo stack with. This must be passed by value.
-  void initialize(T state) => captureState(state);
+  void initialize(T state) {
+    if (_undoStack.isNotEmpty || _redoStack.isNotEmpty) {
+      dispose();
+    }
+    captureState(state);
+  }
+
+  /// Disposes the manager by clearing both undo and redo stacks.
+  ///
+  /// This method is used to clean up resources when the undo/redo manager is no longer needed.
+  void dispose() {
+    _undoStack.clear();
+    _redoStack.clear();
+  }
 
   /// Adds the state to the undo stack.
   ///

@@ -1,3 +1,9 @@
+## 0.1.4
+
+This version of the package includes
+* Addition a `dispose()` method to `UndoRedoManager` to completely discard the state history
+* Calling initialize on an already initialized manager disposes the previous state history
+
 ## 0.1.3
 
 Made the `CloneableMixin` accessible
