@@ -83,7 +83,7 @@ List<int> ages = originalAges;
 List<int> ages = List.from(originalAges); 
 ```
 ##### For Custom Objects
-Implement the `Cloneable` interface to provide a deep copy method:
+Extend the `Cloneable` class to provide a deep copy method:
 
 ```dart
 class Staff extends Cloneable<Staff> {
@@ -97,6 +97,15 @@ class Staff extends Cloneable<Staff> {
       ratings: List.from(ratings),
     );
   }
+}
+```
+
+###### Alternatively
+Use the `CloneableMixin` if you are already extending a class:
+
+```dart
+class Staff extends People with CloneableMixin<Staff> {
+  ...
 }
 ```
 
