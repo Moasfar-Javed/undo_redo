@@ -130,4 +130,12 @@ class UndoRedoManager<T> {
     _redoStack.clear();
     return initialState;
   }
+
+  /// Gets the history of undo-able actions.
+  ///
+  /// Returns:
+  /// - The state history as [List<T>]
+  List<T> history() {
+    return _undoStack;
+  }
 }

@@ -1,3 +1,8 @@
+## 0.1.5
+
+This version of the package includes
+* Addition of a `history()` method to `UndoRedoManager` to get the state history
+
 ## 0.1.4
 
 This version of the package includes
